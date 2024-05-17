@@ -1,4 +1,6 @@
-
+require "user.lsp"
+require "user.cmp"
+require "user.dressing"
 require "user.comment"
 require "user.telescope"
 require "user.plugins"
@@ -13,3 +15,6 @@ require "user.bufferline"
 require "user.toggleterm"
 require "user.surround"
 require "user.treesitter"
+require "user.autopairs"
+require "user.copilot"
+

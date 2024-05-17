@@ -47,6 +47,9 @@ function(use)
     -- treesitter
     use {'nvim-treesitter/nvim-treesitter'}
 
+    -- autopairs
+    use {'windwp/nvim-autopairs'}
+
     -- lualine
     use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
 
@@ -65,10 +68,22 @@ function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
-    }
+        }
 
-    -- bufferline
-    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+        -- bufferline
+        use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+        -- lsp
+        use {"williamboman/mason.nvim"}
+        use {'folke/tokyonight.nvim'}
+        use {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'}
+  use {'neovim/nvim-lspconfig'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'L3MON4D3/LuaSnip'}
+
+    -- dressing
+    use {'stevearc/dressing.nvim'}
 
     -- whichkey
     use {
@@ -85,9 +100,7 @@ function(use)
         end
     }
     -- toggleterm
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end}
+    use {"akinsho/toggleterm.nvim"}
 
     -- surround
     use({
